@@ -1,6 +1,6 @@
-# learn-angularjs
+## Learn-angularjs
 
-# install and run 
+# 1. Install and run 
 
 > Step 1. 
 
@@ -34,5 +34,5 @@ Now run project, this will give you portnumber
 
 > Step 5: 
 
-Goto browser and type <localhost:portnumber>
+Goto browser and type [localhost:portnumber]()
 
