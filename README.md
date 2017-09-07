@@ -34,7 +34,7 @@ Now run project, this will give you portnumber
 
 > Step 5: 
 
-Goto browser and type [localhost:portnumber]()
+Goto browser and type localhost:portnumber
 
 
 
@@ -96,7 +96,7 @@ Now to create new component, type following command
 ```
 
 > Step 2.  
-Import newly created component into app component [app.component.ts]()
+Import newly created component into app component app.component.ts
 
 ```
    import { newComponent} from "./new/new.component";
@@ -104,7 +104,7 @@ Import newly created component into app component [app.component.ts]()
 ```
 
 > Step 3. 
-Use selector of new component [section.component.ts]() into app components' html (default page of app)
+Use selector of new component section.component.ts into app components' html (default page of app)
 
 ```
 @Component({
@@ -114,11 +114,11 @@ Use selector of new component [section.component.ts]() into app components' html
 
 ```
 
-There we have selector: [new-app]() in  [section.component.ts](). Now use this selector into [app.component.html]()
+There we have selector: new-app in  section.component.ts. Now use this selector into app.component.html
 
 ```
 <new-app> </new-app>
 
 ```
 
-Now enjoy working with the new component # (html, css , ts file) and view your result in your browser using [ng serve]() command.
+Now enjoy working with the new component html, css , ts file and view your result in your browser using ng serve command.
