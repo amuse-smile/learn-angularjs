@@ -55,3 +55,26 @@ Installing jquery
 ```
    npm install jquery --save
 ```
+
+> Step 3. 
+
+Link this bootstrap  files
+
+```
+      "styles": [
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      ]
+```
+
+
+> Step 4. 
+
+Link this  jquery files 
+
+```
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ]
+```
