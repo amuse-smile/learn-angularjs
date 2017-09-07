@@ -120,3 +120,5 @@ There we have selector: [new-app]() in  [section.component.ts](). Now use this s
 <new-app> </new-app>
 
 ```
+
+Now enjoy working with the new component [html, css , ts file]() and view your result in your browser using [ng serve]() command.
