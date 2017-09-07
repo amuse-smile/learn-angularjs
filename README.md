@@ -2,63 +2,47 @@
 
 # 1. Install and run 
 
-> Step 1. 
+> Step 1. download nodejs ( visit [nodejs.org](https://nodejs.org/en/) )
 
-download nodejs ( visit [nodejs.org](https://nodejs.org/en/) )
-
-> Step 2.
-
-Open command line and type following command ( visit [cli.angular.io](http://cli.angular.io/)  ) . After successful installation of angular cli go for another steps.
+> Step 2. Open command line and type following command ( visit [cli.angular.io](http://cli.angular.io/)  ) . After successful installation of angular cli go for another steps.
 
 ```
    npm install -g @angular/cli
 ```
 
-> Step 3. 
-
-Start creating project 
+> Step 3. Start creating project 
 
 ```
    ng new projectname
    cd projectname
 ```
 
-> Step 4: 
-
-Now run project, this will give you portnumber
+> Step 4: Now run project, this will give you portnumber
 
 ```
    ng server
 ```
 
 
-> Step 5: 
-
-Goto browser and type localhost:portnumber
+> Step 5: Goto browser and type localhost:portnumber
 
 
 
 # 2. Installing bootstrap and jquery 
 
-> Step 1. 
-
-Installing bootstrap 
+> Step 1. Installing bootstrap 
 
 ```
    npm install boostrap --save
 ```
 
-> Step 2. 
-
-Installing jquery 
+> Step 2. Installing jquery 
 
 ```
    npm install jquery --save
 ```
 
-> Step 3. 
-
-Link this bootstrap  files
+> Step 3. Link this bootstrap  files
 
 ```
       "styles": [
@@ -68,9 +52,7 @@ Link this bootstrap  files
 ```
 
 
-> Step 4. 
-
-Link this  jquery files 
+> Step 4. Link this  jquery files 
 
 ```
       "scripts": [
@@ -87,24 +69,21 @@ After downloading project, we get folder structure and we will work inside proje
 
 So lets start working with component. 
 
-> Step 1. 
-Now to create new component, type following command
+> Step 1. Now to create new component, type following command
 
 ```
    ng g c <componentname>
 
 ```
 
-> Step 2.  
-Import newly created component into app component app.component.ts
+> Step 2.  Import newly created component into app component app.component.ts
 
 ```
    import { newComponent} from "./new/new.component";
 
 ```
 
-> Step 3. 
-Use selector of new component section.component.ts into app components' html (default page of app)
+> Step 3. Use selector of new component section.component.ts into app components' html (default page of app)
 
 ```
 @Component({
