@@ -36,3 +36,22 @@ Now run project, this will give you portnumber
 
 Goto browser and type [localhost:portnumber]()
 
+
+
+# 2. Installing bootstrap and jquery 
+
+> Step 1. 
+
+Installing bootstrap 
+
+```
+   npm install boostrap --save
+```
+
+> Step 2. 
+
+Installing jquery 
+
+```
+   npm install jquery --save
+```
