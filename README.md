@@ -78,3 +78,45 @@ Link this  jquery files
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ]
 ```
+
+
+
+# 3. Working with component 
+
+After downloading project, we get folder structure and we will work inside projectname/src/app. Here there woud be the default file but now we will create  our component to work. 
+
+So lets start working with component. 
+
+> Step 1. 
+Now to create new component, type following command
+
+```
+   ng g c <componentname>
+
+```
+
+> Step 2.  
+Import newly created component into app component [app.component.ts]()
+
+```
+   import { newComponent} from "./new/new.component";
+
+```
+
+> Step 3. 
+Use selector of new component [section.component.ts]() into app components' html (default page of app)
+
+```
+@Component({
+  selector: 'new-app',
+  .................
+})
+
+```
+
+There we have selector: [new-app]() in  [section.component.ts](). Now use this selector into [app.component.html]()
+
+```
+<new-app> </new-app>
+
+```
