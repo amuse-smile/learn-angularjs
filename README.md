@@ -101,3 +101,71 @@ There we have selector: new-app in  section.component.ts. Now use this selector 
 ```
 
 Now enjoy working with the new component html, css , ts file and view your result in your browser using ng serve command.
+
+
+
+# 4. Working with expression 
+
+So lets start working with expression now. 
+
+> working with ngFor
+
+We have list in html file and array in ts file inside class.
+
+```
+/* html file */
+   <ol>
+    <li *ngFor="let l of language"> {{l}} </li>
+  </ol>
+
+```
+
+```
+/* ts file */
+  public language = ['c' , 'c++' , 'java'];
+  
+```
+
+Now We have list in html file and json variable in ts file inside class.
+
+```
+/* html file */
+ <ol>
+    <li *ngFor="let x of developer">{{x.name}}, {{x.language}}</li>
+ </ol>
+
+```
+
+```
+/* ts file */
+ public developer = [
+    {
+    'name' : 'John',
+    'language' : 'PHP'
+    },
+    {
+      'name' : 'Tia',
+      'language' : 'Java'
+      }
+];
+  
+```
+
+
+> working with ngIf
+
+We have paragraph tag in html file and boolean variable in ts file inside class.
+
+```
+/* html file */
+  <p *ngIf = "checkvalue"> I am displayed </p>
+  <p *ngIf = "!checkvalue"> I am not displayed </p>
+
+```
+
+```
+/* ts file */
+ public checkvalue:Boolean = true;
+
+```
+
