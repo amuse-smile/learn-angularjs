@@ -103,8 +103,41 @@ There we have selector: new-app in  section.component.ts. Now use this selector 
 Now enjoy working with the new component html, css , ts file and view your result in your browser using ng serve command.
 
 
+# 4. Working with data binding 
 
-# 4. Working with expression 
+So lets start working with data binding  now. 
+
+> working with content
+
+```
+/* html file */
+  <h1>  {{welcometitle}} </h1>
+  <p>  {{welcomemsg}} </p>
+
+```
+
+```
+/* ts file */
+  public welcometitle = "Welcome to angular tutorials";
+  public welcomemsg = "This is angular4 tutorials for beginners.";
+  
+```
+> working with images
+
+```
+/* html file */
+  <img  src={{ngImg}}>
+
+```
+
+```
+/* ts file */
+ public ngImg = "../assets/img/angular.png";
+  
+```
+
+
+# 5. Working with expression 
 
 So lets start working with expression now. 
 
