@@ -202,3 +202,66 @@ We have paragraph tag in html file and boolean variable in ts file inside class.
 
 ```
 
+# 6. Working with pipes 
+
+So lets start working with pipes(filters) now. 
+
+> working with all pipes 
+
+We have list in html file and experssion in ts file inside class.
+
+```
+/* html file */
+      <table class="table" >
+        <tr>
+          <th> Filters </th>
+          <th> Result </th>
+        </tr>
+        <tr>
+          <th> Currency </th>
+          <td>{{ priceValue | currency:'CAD'}} </td>
+        </tr>
+        <tr>
+          <th> Date </th>
+          <td>{{ dateValue | date:'y-M-d, h:m:s' }}</td>
+        </tr>
+        <tr>
+          <th>Decimal </th>
+          <td> {{demicalValue| number:'2.2-3' }} </td>
+        </tr>
+        <tr>
+          <th>LowerCase </th>
+           <td> {{lowercaseValue | lowercase }} </td>
+        </tr>
+        <tr>
+          <th>UpperCase </th>
+           <td> {{upperValue| uppercase }} </td>
+        </tr>
+        <tr>
+          <th>Percent </th>
+          <td> {{percentValue | percent :'2.2-2' }}  </td>
+        </tr>
+        <tr>
+          <th>Slice </th>
+          <td> {{sliceValue | slice:6:8}}  </td>
+        </tr>
+        <tr>
+          <th> Json</th>
+          <td> {{jsonValue | json}}  </td>
+        </tr>
+      </table>
+
+```
+
+```
+/* ts file */
+   public priceValue = 4320.33434;
+   public dateValue = new Date();
+   public demicalValue = 5.6;
+   public lowercaseValue = "WELcome";
+   public upperValue = "welcoME";
+   public percentValue = 343.45344;
+   public sliceValue = "hello world";
+   public jsonValue = [{ 'name' : 'John', 'hobby' : 'dance' }];
+  
+```
