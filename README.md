@@ -4,11 +4,15 @@
 
 - [Install and run](#Install-and-run)
 - [Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
-- [What is it?](#what-is-it)
+- [Install and run](#what-is-it)
 - [Why use it](#why-use-it)
 
 
 
+## Install and run
+
+
+## Why use it
 
 
 ## Install and run 
@@ -37,10 +41,7 @@
 
 > Step 5: Goto browser and type localhost:portnumber
 
-## What is it?
 
-
-## Why use it
 
 ## Installing bootstrap and jquery 
 
