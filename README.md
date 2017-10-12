@@ -1,6 +1,12 @@
 ## Learn-angularjs
 
-# 1. Install and run 
+## Table of Contents
+
+- [Install and run](#Install-and-run)
+- Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
+
+
+## Install and run 
 
 > Step 1. download nodejs ( visit [nodejs.org](https://nodejs.org/en/) )
 
@@ -28,7 +34,7 @@
 
 
 
-# 2. Installing bootstrap and jquery 
+## Installing bootstrap and jquery 
 
 > Step 1. Installing bootstrap 
 
