@@ -3,8 +3,9 @@
 ## Table of Contents
 
 - [Install and run](#Install-and-run)
-- Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
-
+- [Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
+- [What is it?](#what-is-it)
+- [Why use it?](#why-use-it)
 
 ## Install and run 
 
@@ -396,8 +397,11 @@ To install our router into our app we use the RouterModule.forRoot() function in
 ```
 
 
+## What is it?
 
 
+
+## Why use it?
 
 
 
