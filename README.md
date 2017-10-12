@@ -4,12 +4,13 @@
 
 - [Install and run](#install-and-run)
 - [Installing bootstrap and jquery](#installing-bootstrap-and-jquery)
-- [Why use it](#why-use-it)
+- [Working with component](#working-with-component)
+- [Working with data binding](#working-with-data-binding)
+- [Working with expression](#working-with-expression)
+- [Working with pipes](#working-with-pipes)
+- [Working with routes](#working-with-routes)
 
-
-
-## Why use it
-
+    
 
 ## Install and run 
 
@@ -75,7 +76,7 @@
 
 
 
-# 3. Working with component 
+## Working with component 
 
 After downloading project, we get folder structure and we will work inside projectname/src/app. Here there woud be the default file but now we will create  our component to work. 
 
@@ -115,7 +116,7 @@ There we have selector: new-app in  section.component.ts. Now use this selector 
 Now enjoy working with the new component html, css , ts file and view your result in your browser using ng serve command.
 
 
-# 4. Working with data binding 
+## Working with data binding 
 
 So lets start working with data binding  now. 
 
@@ -149,7 +150,7 @@ So lets start working with data binding  now.
 ```
 
 
-# 5. Working with expression 
+## Working with expression 
 
 So lets start working with expression now. 
 
@@ -214,7 +215,7 @@ We have paragraph tag in html file and boolean variable in ts file inside class.
 
 ```
 
-# 6. Working with pipes 
+## Working with pipes 
 
 So lets start working with pipes(filters) now. 
 
@@ -278,7 +279,7 @@ We have list in html file and experssion in ts file inside class.
   
 ```
 
-# 7. Working with routes 
+## Working with routes 
 
 So lets start for routing. 
 
