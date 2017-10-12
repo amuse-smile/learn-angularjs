@@ -4,18 +4,16 @@
 
 - [Install and run](#Install-and-run)
 - [Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
-- [Install and run](#what-is-it)
+- [Install and run](#Install-and-run)
 - [Why use it](#why-use-it)
 
-
-
-## Install and run
 
 
 ## Why use it
 
 
 ## Install and run 
+
 
 > Step 1. download nodejs ( visit [nodejs.org](https://nodejs.org/en/) )
 
