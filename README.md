@@ -271,18 +271,123 @@ We have list in html file and experssion in ts file inside class.
 So lets start for routing. 
 
 There are three main components that we use to configure routing in Angular:
-•	Routes describes our application’s routes
-•	RouterOutlet is a “placeholder” component that gets expanded to each route’s content
-•	RouterLink is used to link to routes
+-	Routes describes our application’s routes
+-	RouterOutlet is a “placeholder” component that gets expanded to each route’s content
+-	RouterLink is used to link to routes
 
 
 > # Routes 
 
+> Step 1.  Create routes.ts file
+
+> Step 2. Imports 
+
+in module.ts 
+
+```
+import { Routes, RouterModule }   from '@angular/router'; 
+
+```
+
+and in routes.ts
+
+```
+import { Routes }   from '@angular/router'; 
+
+```
+
+ When we put RouterModule in our imports it means that we’re able to use the RouterOutlet and RouterLink components in this module.
+
+
+> Step 3.  routes.ts 
+
+```
+ export const approuter:Routes =
+[
+]
+
+```
+
+> Step 4. Import all necessary components
+
+```
+import { HomeComponent } from './home/home.component';
+
+```
+
+> Step 5. Start routing the components 
+
+```
+export const approuter:Routes =
+[
+  {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: '',
+        redirectTo: 'home',
+        pathMatch:'full'
+    },
+    {
+        path: '**',
+        redirectTo: 'home',
+    },
+    { 
+        path:'admin',
+        component:AdminComponent,
+        children:[
+            {path: Home, component: HomeComponent },
+            { path:'',redirectTo: '/admin/home, pathMatch:'full'},
+            { path: '**', component: HomeComponent
+   }
+
+]
+
+```
+
+
+> Step 6.  Now import again in module 
+
+```
+import { approuter}   from './routes'; 
+
+```
+
+and 
+
+```
+RouterModule.forRoot(approuter) inside NgModule’s import 
+
+```
+
+To install our router into our app we use the RouterModule.forRoot() function in the imports key of our NgModule and  we give our routes as the argument to RouterModule.forRoot().
+
 
 > # RouterOutlet
 
+> in html file where needed
+ 
+```
+<router-outlet></router-outlet>   
+ 
+```
 
 > # RouterLink
+
+> use these routes as navigation in html file where needed
+ 
+```
+<a routerLink="/home">Home</a>
+
+```
+
+> For active link
+ 
+```
+<li routerLinkActive="active current" ><a routerLink="/home">Home</a></li>  
+
+```
 
 
 
