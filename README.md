@@ -2,9 +2,8 @@
 
 ## Table of Contents
 
-- [Install and run](#Install-and-run)
-- [Installing bootstrap and jquery](#Installing-bootstrap-and-jquery)
-- [Install and run](#Install-and-run)
+- [Install and run](#install-and-run)
+- [Installing bootstrap and jquery](#installing-bootstrap-and-jquery)
 - [Why use it](#why-use-it)
 
 
