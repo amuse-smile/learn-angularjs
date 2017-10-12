@@ -265,3 +265,28 @@ We have list in html file and experssion in ts file inside class.
    public jsonValue = [{ 'name' : 'John', 'hobby' : 'dance' }];
   
 ```
+
+# 7. Working with routes 
+
+So lets start for routing. 
+
+There are three main components that we use to configure routing in Angular:
+•	Routes describes our application’s routes
+•	RouterOutlet is a “placeholder” component that gets expanded to each route’s content
+•	RouterLink is used to link to routes
+
+
+> # Routes 
+
+
+> # RouterOutlet
+
+
+> # RouterLink
+
+
+
+
+
+
+
