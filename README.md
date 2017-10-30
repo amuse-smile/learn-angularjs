@@ -477,3 +477,43 @@ import { FormsModule } from '@angular/forms';
 
 ```
 
+> Step 5. To diasble submit button until form field is success. (As we have #registration="ngForm". So there is registerForm [disabled]="")
+
+
+```
+    <button type="submit"  [disabled]="registerForm.invalid" class="btn btn-primary btn-block">Submit</button>
+
+```
+
+> Step 6. Now finally for displaying error. 
+
+> # For form group div
+
+Which means class="has-error" when nameN field contain any error and class="has-success" for error free input field.
+
+```
+    <div class="form-group" 
+            [class.has-success]="nameN.valid && nameN.touched" 
+            [class.has-error] = "nameN.invalid && nameN.touched">
+                     .......  
+    </div>
+
+```
+
+> # For error span message
+
+This display error message according to the error in input field.
+
+```
+    <div class="form-group" 
+            [class.has-success]="nameN.valid && nameN.touched" 
+            [class.has-error] = "nameN.invalid && nameN.touched">
+                  ......
+                  
+            <span  *ngIf="nameN.invalid && nameN.touched" class="help-block">
+                   <span  *ngIf="nameN.errors.required"> Name field is required <br> </span> 
+                   <span *ngIf="nameN.errors.minlength"> Name must be at least 4 characters long. </span>
+            </span>
+    </div>
+
+```
