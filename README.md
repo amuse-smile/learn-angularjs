@@ -402,6 +402,47 @@ To install our router into our app we use the RouterModule.forRoot() function in
 
 ```
 
+## Working with Template driven form 
+
+> Step 1.  In app.module.ts file
+
+```
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    ...,
+    FormsModule
+  ]
+
+```
+
+> Step 2. In html file add forms with needed input  
+
+```
+        <form novalidate role="form">
+            <div class="form-group has-error">
+                <label class="control-label">Name</label>
+                <input type="text" class="form-control" >
+                <span  class="help-block">
+                    <span > Name field is required <br> </span> 
+                    <span > It contain only alphabet </span>
+                </span>
+            </div>
+
+            <div class="form-group has-error">
+                <label class="control-label">Email</label>
+                <input type="email" class="form-control" >
+                <span  class="help-block">
+                    <span > Email field is required <br> </span> 
+                    <span > Email field is invalid </span>
+                </span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form> 
+
+```
 
 
 
