@@ -377,7 +377,7 @@ RouterModule.forRoot(approuter) inside NgModule’s import
 To install our router into our app we use the RouterModule.forRoot() function in the imports key of our NgModule and  we give our routes as the argument to RouterModule.forRoot().
 
 
-> # RouterOutlet
+ # RouterOutlet
 
 > in html file where needed
  
@@ -386,7 +386,7 @@ To install our router into our app we use the RouterModule.forRoot() function in
  
 ```
 
-> # RouterLink
+ # RouterLink
 
 > use these routes as navigation in html file where needed
  
