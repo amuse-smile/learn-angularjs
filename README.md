@@ -377,7 +377,7 @@ RouterModule.forRoot(approuter) inside NgModule’s import
 To install our router into our app we use the RouterModule.forRoot() function in the imports key of our NgModule and  we give our routes as the argument to RouterModule.forRoot().
 
 
- # RouterOutlet
+> ##  RouterOutlet
 
 > in html file where needed
  
@@ -386,7 +386,7 @@ To install our router into our app we use the RouterModule.forRoot() function in
  
 ```
 
- # RouterLink
+> ##  RouterLink
 
 > use these routes as navigation in html file where needed
  
@@ -487,7 +487,7 @@ import { FormsModule } from '@angular/forms';
 
 > Step 6. Now finally for displaying error. 
 
-> # For form group div
+> ## For form group div
 
 Which means class="has-error" when nameN field contain any error and class="has-success" for error free input field.
 
@@ -500,7 +500,7 @@ Which means class="has-error" when nameN field contain any error and class="has-
 
 ```
 
-> # For error span message
+> ## For error span message
 
 This display error message according to the error in input field.
 
