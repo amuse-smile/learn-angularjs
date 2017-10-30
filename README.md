@@ -289,7 +289,7 @@ There are three main components that we use to configure routing in Angular:
 -	RouterLink is used to link to routes
 
 
-> # Routes 
+> ## Routes 
 
 > Step 1.  Create routes.ts file
 
