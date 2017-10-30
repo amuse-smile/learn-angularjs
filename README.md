@@ -9,8 +9,8 @@
 - [Working with expression](#working-with-expression)
 - [Working with pipes](#working-with-pipes)
 - [Working with routes](#working-with-routes)
-
-    
+- [Working with template driven form](#working-with-template-driven-form)
+   
 
 ## Install and run 
 
@@ -402,6 +402,7 @@ To install our router into our app we use the RouterModule.forRoot() function in
 
 ```
 
+
 ## Working with Template driven form 
 
 > Step 1.  In app.module.ts file
@@ -421,7 +422,7 @@ import { FormsModule } from '@angular/forms';
 
 ```
         <form novalidate role="form">
-            <div class="form-group has-error">
+            <div class="form-group">
                 <label class="control-label">Name</label>
                 <input type="text" class="form-control" >
                 <span  class="help-block">
@@ -430,7 +431,7 @@ import { FormsModule } from '@angular/forms';
                 </span>
             </div>
 
-            <div class="form-group has-error">
+            <div class="form-group">
                 <label class="control-label">Email</label>
                 <input type="email" class="form-control" >
                 <span  class="help-block">
@@ -444,7 +445,35 @@ import { FormsModule } from '@angular/forms';
 
 ```
 
+> Step 3. Add #AnyName= "ngForm" to form tag
 
 
+```
+    <form novalidate role="form" #registration="ngForm">
+ 
+        ......
+ 
+    </form
 
+```
+
+> Step 4. Add all needed attribute in input field
+
+
+```
+    <form novalidate role="form" #registration="ngForm">
+       ....
+       
+       <input type="text" class="form-control" 
+            name="Name" 
+            minlength="4"  
+            required 
+            #nameN="ngModel" 
+            ngModel>
+       
+       ...
+ 
+    </form
+
+```
 
