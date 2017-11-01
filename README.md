@@ -517,3 +517,39 @@ This display error message according to the error in input field.
     </div>
 
 ```
+
+> Step 7. For sending input field data to ts file. 
+
+> ## html : in input field 
+
+Replace ngModel with ngModel into [(ngModel)] (ngModel in banana inside the box )
+
+```
+    <input type="text" class="form-control" 
+            ..... 
+            [(ngModel)]="createdata.Name">
+       >
+
+```
+
+> ## ts file : in export class
+
+initialization creatdata in ts file
+
+```
+   public createdata:any = {fullname:'', gender:''};
+
+
+```
+
+on button click submit() function is called
+
+```
+   public createdata:any = {fullname:'', gender:''};
+
+  submit(createdata){
+    var data = this.createdata;
+    console.log(data);
+  }
+
+```
