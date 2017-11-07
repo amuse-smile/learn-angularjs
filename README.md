@@ -10,7 +10,7 @@
 - [Working with pipes](#working-with-pipes)
 - [Working with routes](#working-with-routes)
 - [Working with template driven form](#working-with-template-driven-form)
-   
+- [Working with service](#working-with-service)
 
 ## Install and run 
 
@@ -82,7 +82,7 @@ After downloading project, we get folder structure and we will work inside proje
 
 So lets start working with component. 
 
-> Step 1. Now to create new component, type following command
+> Step 1. Now to create new component, type following command in command line
 
 ```
    ng g c <componentname>
@@ -553,3 +553,107 @@ on button click submit() function is called
   }
 
 ```
+
+
+## Working with service 
+
+> Step 1.  Now to create new service, type following command in command line 
+
+```
+   ng g s <servicename>
+
+```
+
+> Step 2.  Now we have to add it to the providers property of the NgModule decorator in src/app/app.module.ts,  
+
+Import service (can be found in spec.ts file for previously created service )
+
+```
+   import { <DataServicename>} from './<servicename>.service';
+
+```
+
+Provider ( <DataServicename> can be found in export class of service.ts file)
+
+```
+   @NgModule({
+
+  providers: [<DataServicename>],
+  
+})
+
+
+```
+
+> Step 3.  Now Working with the Service File
+
+```
+  import { Injectable } from '@angular/core';
+   @Injectable()
+   export class DataService {
+     constructor() { }
+     colors = [ 'red','yellow','green' ];
+
+     myData() {
+       return 'This is my data function';
+     }
+   }
+
+```
+
+> Step 4.  Now Working with the Components File
+
+The first step requires importing the service at the top of the component.
+
+```
+  import { <DataserviceService> } from './dataservice.service';
+  
+```
+
+ Next, within the constructor, we have to import it through dependency injection (inside export class)
+
+```
+  export class AppComponent {
+  constructor(private dataService:DataService) {  }
+  
+}
+  
+```
+
+Now we can use dataService to access its's associated properties and methods.
+
+Underneath the constructor() { }, let's add the ngOnInit() lifecycle hook, which runs when the component loads
+
+
+```
+  export class AppComponent {
+  constructor(private dataService:DataService) { }
+  
+     colorStr:string = '';
+     someProperty:string = '';
+     ngOnInit() {
+      this.colorStr = this.dataService.colors
+      this.someProperty = this.dataService.myData();
+     }
+
+}
+  
+```
+
+> Step 4.  Now use these variable in html file
+
+
+```
+  <p> {{someProperty}} </p> 
+  
+  <ul>
+      <li *ngFor="let x of colorStr" >  {{x}} </li>
+  </ul>
+  
+```
+
+
+
+
+
+ 
