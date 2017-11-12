@@ -835,3 +835,36 @@ in app.component.html file
 ```
 
 
+> Step 6.  Now for error handling  (in service.ts file)
+
+ Import Observable and  rxjs
+ 
+```
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
+
+```
+for handling Error (it work as try block)
+ 
+```
+private handleErrorObservable (error: Response | any) {
+    console.error(error.message || error);
+    return Observable.throw(error.message || error);
+  }
+  
+```
+
+ for catching error add catch() after map (it work as catch block)
+
+```
+public createData(data){
+    let create_url : string = "<urlLink>";
+    return this
+    ._http.post(create_url , data).
+    .map((res:Response) => res.json())
+     .catch(this.handleErrorObservable);
+  }
+
+
