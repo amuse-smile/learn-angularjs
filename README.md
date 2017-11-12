@@ -11,6 +11,8 @@
 - [Working with routes](#working-with-routes)
 - [Working with template driven form](#working-with-template-driven-form)
 - [Working with service](#working-with-service)
+- [Working with http](#working with http)
+
 
 ## Install and run 
 
@@ -564,7 +566,7 @@ on button click submit() function is called
 
 ```
 
-> Step 2.  Now we have to add it to the providers property of the NgModule decorator in src/app/app.module.ts,  
+> Step 2.  Now we have to add it to the providers property of the NgModule decorator in app.module.ts,  
 
 Import service (can be found in spec.ts file for previously created service )
 
@@ -652,8 +654,184 @@ Underneath the constructor() { }, let's add the ngOnInit() lifecycle hook, which
   
 ```
 
+## Working with http
+
+For http we need to create service and import it in app.module.ts file 
 
 
+> Step 1.  
+
+Now to create new service, type following command in command line 
+
+```
+   ng g s <servicename>
+
+```
 
 
+Import service in app.module.ts and provider 
+
+```
+   import { <DataServicename>} from './<servicename>.service';
+
+```
+
+Provider ( <DataServicename> can be found in export class of service.ts file)
+
+```
+   @NgModule({
+
+  providers: [<DataServicename>],
+  
+})
+
+
+```
+
+> Step 2.  To use the Http service we need to (you guessed it) import & and inject it 
+
+in service.ts file
+
+```
+   import { Http, Response } from '@angular/http'; 
+
+```
+
+ in app.module.ts file
+
+```
+   import { HttpModule } from '@angular/http'; 
+
+```
+and HttpModule ngModule
+
+```
+ imports: [
+    BrowserModule,
+    HttpModule,
+  ],
+  
+ ```
+
+
+ > Step 3.  Next, within the constructor, we have to import it through dependency injection (inside export class) 
+
+in service.ts file
+
+```
+   export class UserService {
+      constructor ( private http: Http ) {}
+   }
+
+```
+
+in app.component.ts file
+
+```
+   export class UserService {
+     constructor(private dataService:<DataServicename>) {  }
+   }
+
+```
+
+ > Step 4.  Now working with get data  
+
+in service.ts file
+
+```
+  public getData(){
+    let getposts_url : string = "<urlLink>";
+    return this._http.get(getposts_url);
+  }
+```
+
+in app.component.ts file
+
+```
+  public postsdata:any = '';
+  public viewJsondata(){
+    this.dataService.getData()
+    .subscribe(
+      response => {
+        this.postsdata = response.json();
+        console.log(response.json());
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+   
+   ngOnInit() {
+     this.getPostsdata();
+  }
+
+
+```
+
+in app.component.html file 
+
+```
+<ul>
+  <li *ngFor="let post of postsdata"> {{post.title}}, {{post.body}} </li>
+</ul>
+
+```
+
+> Step 5.  Now working with post data  
+
+in service.ts file
+
+```
+public createData(data){
+    let create_url : string = "<urlLink>";
+    return this
+    ._http.post(create_url , data).
+    .map((res:Response) => res.json());
+  }
+
+```
+
+in app.component.ts file
+
+```
+  public createdata:any = {title:'' , body:''};
  
+  public insertDatapost():void{
+    this.dataService.createData(this.createdata)
+    .subscribe(
+      response => {
+        this.createdata = response;
+        console.log(response);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+```
+
+in app.component.html file
+
+```
+<form #loginForm ="ngForm" >
+  <div>
+    <label for="title" >Title:</label>
+    <input type="text" required #titleT="ngModel" name="title" [(ngModel)]="createdata.title">
+  </div>
+  
+  <div>
+    <label for="title" >Body:</label>
+    <input type="text" required #bodyB="ngModel" name="body" [(ngModel)]="createdata.body">
+  </div>
+
+
+  <div class="">
+    <button type="submit" (click)="insertDatapost()" >Submit</button>
+  </div>
+</form>
+
+```
+
+
